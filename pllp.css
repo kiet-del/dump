@@ -1,0 +1,176 @@
+body {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ff8888;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate3d(-100vw, 0, 0);
+    transition: transform .3s cubic-bezier(0, .52, 0, 1);
+    overflow: scroll;
+    z-index: 10;
+}
+
+.Menu.show {
+    transform: translate3d(0vw, 0, 0);
+}
+
+#close {
+    position: relative;
+    right: 580px;
+    bottom: 53px;
+}
+
+.blocky {
+    height: 25%;
+    width: 100%;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div,
+button,
+span,
+section {
+    font-family: 'Sacramento', cursive;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    width: 100%;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+}
+
+.icons {
+    margin-right: 25px;
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchbar {
+    width: 100px;
+    height: 25.5px;
+    background-color: rgba(85, 107, 47, 0);
+    border: none;
+    border-bottom: solid 2px coral;
+    outline: none;
+}
+
+#search {
+    position: relative;
+    top: 7px;
+    z-index: 0;
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+.Big_Container {
+    width: 100%;
+    height: 100vh;
+}
+
+.twopart {
+    display: flex;
+    height: 92%;
+    width: 100%;
+}
+
+.partone {
+    width: 40%;
+    height: 100%;
+    background-color: crimson;
+    background-attachment: fixed;
+}
+
+.parttwo {
+    width: 60%;
+    height: 100%;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.ShopNow {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ShopNow:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.ShopNow h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.nextpart {
+    height: 90vh;
+    width: 100%;
+    opacity: 0.8;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.zingerbugimages.com%2Fbackgrounds%2Fbrown_plaid_fabric_background_1800x1600.jpg&f=1&nofb=1);
+    text-align: center;
+}
+
+.smalltitle {
+    margin: 0;
+    position: relative;
+    top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+}
+
+.flexbox {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cardgend {
+    width: 20%;
+    height: 70%;
+    background-color: rgb(100, 237, 168);
+}
+
+.footer {
+    height: 20vh;
+    width: 100%;
+    background-color: whitesmoke;
+}

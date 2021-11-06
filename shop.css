@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+body {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.cart-btn {
+    border: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+    top: 8px;
+    margin-left: 15px;
+}
+
+.items-count {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    border-radius: 5px;
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+}
+
+.realcounts {
+    position: relative;
+    margin-left: 0.5px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.clothes {
+    padding: 1rem 1rem;
+}
+
+.section-title h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+
+.products-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.img-cont {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.addcart-btn {
+    position: absolute;
+    top: 70%;
+    right: 0;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+    background-color: rgb(85, 32, 57);
+    transition: transform .5s ease-in-out;
+    transform: translateX(101%);
+    cursor: pointer;
+}
+
+.addcart-btn:hover {
+    color: var(--mainWhite);
+}
+
+.img-cont:hover .addcart-btn {
+    transform: translateX(0);
+}
+
+.img-cont img {
+    width: 70%;
+    height: 60%;
+    max-height: 12rem;
+    transition: opacity .5s ease-in-out;
+}
+
+.img-cont:hover img {
+    opacity: 0.5;
+}
+
+.clothes h3 {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.clothes h4 {
+    margin-top: 0.7rem;
+    text-align: center;
+}
+
+.HiddenCart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: rgb(240, 157, 81, 0.5);
+    z-index: 2;
+    visibility: hidden;
+}
+
+.TheCart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 3;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
+}
+
+.showCart {
+    transform: translateX(0);
+}
+
+.transparentBcg {
+    visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+    .TheCart {
+        width: 30vw;
+        min-width: 300px;
+    }
+}
+
+.close-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.TheCart h2 {
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 2rem;
+}
+
+.infos {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px
+}
+
+.cart-item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.cart-item img {
+    width: 75px;
+    height: 75px;
+}
+
+.cart-item h4 {
+    margin: 2px 0 0 0;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+
+.cart-item h5 {
+    margin: 0;
+    letter-spacing: var(--mainSpacing);
+}
+
+.item-amount {
+    text-align: center;
+}
+
+.remove-item {
+    color: grey;
+    cursor: pointer;
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.cart-footer {
+    margin-top: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+}
+
+.cart-footer h3 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.clear-cart {
+    background-color: rgba(156, 0, 0, 0.678);
+    font-size: 30px;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+}
